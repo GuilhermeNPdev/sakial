@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:insert="layout/cabecalho">
+<meta charset="ISO-8859-1">
+<title>Eu vou ser um analista baby</title>
+</head>
+<body>
+<div th:insert="layout/menu"></div>
+MUGUIWARA
+<table class="table table-sm table-stripped table-hover table-bordered">
+                    <thead>
+                        <tr>
+                           <th>ID</th>
+                           <th>Endereço</th>
+                           <th>Distrito</th>
+                           <th>Cidade</th>
+                           <th>atualização</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                   
+                       <tr th:each="AD : ${adress}">
+                            <td th:text="${AD.AddressId}"></td>
+                            <td th:text="${AD.district}"></td>
+                            <td th:text="${AD.CityId}"></td>
+                            <td th:text="${AD.LastUpdate}"></td>
+                        </tr>  
+                                        
+                       
+                             
+        
+                    </tbody>
+
+</table> 
+<div th:insert="layout/rodape"></div>
+</body>
+</html>
